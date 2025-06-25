@@ -132,3 +132,16 @@ There are two types:
 
 2. COCO
 3. Google Open Images
+
+                    YOLO
+                    ----
+You Only Look Once
+
+Image Classification => Is this a dog or a person.
+NN output => Dog = 1, Person = 0
+
+Object Localization => Where exactly is the dog in this image?
+NN Output => Dog = 1, Person = 0 + Bounding Box
+
+
+IOU => Intersection over union = intersect area /  union area
