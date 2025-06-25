@@ -145,3 +145,11 @@ NN Output => Dog = 1, Person = 0 + Bounding Box
 
 
 IOU => Intersection over union = intersect area /  union area
+
+Versions
+********
+
+2016 -> YOLO V1 => Unified, Real-Time Object Detection
+2017 -> YOLO V2 = > Better, Faster, Stronger
+2018 -> YOLO v3 => An Incremental Improvement
+2020 -> YOLO V4 => Optimal speed and Accuracy of Object Detction.
