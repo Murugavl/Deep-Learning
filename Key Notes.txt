@@ -1,0 +1,134 @@
+Precision = TP/(TP + FP)
+
+Recall = TP / (TP + FN)
+
+F1_Score = 2 * ((Precision * Recall) / Precision + Recall)
+
+🌟SMOTE - Synthetic Minority Over-Sampling Technique
+
+                  Stratify in train_test_split
+                  ****************************
+
+Goal: 
+-----
+Split a dataset into training and test sets.
+But your target labels (y) are imbalanced.
+
+Example Dataset (Simplified)
+You have 10 data points:
+
+Index	Feature	Label (y)
+1	      ...	0
+2	      ...	0
+3	      ...	0
+4	      ...	0
+5	      ...	0
+6	      ...	1
+7	      ...	1
+8	      ...	1
+9	      ...	1
+10	      ...	1
+
+That means:
+Class 0: 5 samples
+Class 1: 5 samples
+
+Now let's split 80% train / 20% test.
+
+🔁 Without stratify=y
+----------------------
+train_test_split(X, y, test_size=0.2)
+This may randomly select 2 samples from class 1 only for test set. You might get:
+
+Train: 5 class 0, 3 class 1
+Test: 0 class 0, 2 class 1
+
+
+✅ With stratify=y
+-------------------
+train_test_split(X, y, test_size=0.2, stratify=y)
+This will keep the same class ratio in both sets.
+
+Train: 4 class 0, 4 class 1
+Test: 1 class 0, 1 class 1
+
+                    CNN
+                    ***
+
+Convolution:
+-----------
+1. Connections sparsity reduces overfitting.
+2. Conv + pooling gives location invariant feature detection.
+3. Parameter sharing.
+
+ReLU:
+-----
+1. Rectified Linear Unit.
+2. Introduces nonlinearity.
+3. Speeds up training, faster to compute.
+
+Pooling:
+-------
+1. Reduces dimensions and computation.
+2. Reduces overfitting.
+3. Makes the model tolerant towards small distortion and variations.
+
+Rotation and Thickness:
+-----------------------
+1. CNN by itself doesn't take care of rotation and scale.
+2. You need to have rotated, scaled samples in training dataset.
+3. If you don't have such samples than use data augmentation methods to generate new rotated/scaled samples from existing training samples.
+
+
+                    Image Classification
+                    --------------------
+Identify what is in an image.
+
+How it works:
+The model looks at the whole image and assigns a label (or multiple labels) to it.
+
+Example:
+Input: A picture of a cat
+Output: "cat"
+
+If it's multi-class:
+Input: A picture with both cat and dog
+Output: ["cat", "dog"] (multi-label classification)
+
+
+                    Object Detection
+                    ----------------
+Identify what and where objects are in the image.
+
+How it works:
+Draws bounding boxes around objects.
+Classifies each box.
+
+Example:
+Input: Image of street with cars and pedestrians
+Output:
+Box 1: "car" at (x1, y1, x2, y2)
+Box 2: "person" at (x3, y3, x4, y4)
+
+                    Image Segmentation
+                    ------------------
+Label each pixel in the image with a class.
+There are two types:
+1. Semantic Segmentation:
+    * Every pixel is classified into a class.
+    * No distinction between different objects of the same class.
+
+2. Instance Segmentation:
+    * Like semantic segmentation plus it distinguishes each object instance.
+
+                    Popular datasets for CV
+                    -----------------------
+
+1. IMAGENET
+   --------
+    1. 14 million hand annotated images.
+    2. Annotated bounding boxes for at leat 1 million images.
+    3. Annotates using crowdsourcing amazon mechanical turk.
+
+2. COCO
+3. Google Open Images
