@@ -161,3 +161,46 @@ Recurrent Neural Networks (RNNs) are a class of deep learning algorithms specifi
 designed to process sequential data, such as time series, text, audio, or video. Unlike
 traditional feedforward neural networks, RNNs have memory — they use their internal state 
 (hidden state) to process sequences of inputs.
+
+Types of RNN
+------------
+1. Many-to-Many (Same Length)
+        Use Case: Labeling every element in a sequence
+        Input: Sequence of inputs
+        Output: Sequence of outputs (same length)
+        Example: Part-of-speech tagging
+
+2. Many-to-Many (Different Lengths)
+        Use Case: Sequence translation
+        Input: Sequence of inputs
+        Output: Sequence of outputs (different length)
+        Example: Machine translation (e.g., English → French)
+        Uses encoder-decoder architecture
+
+3. One-to-One
+        Use Case: Basic neural networks (not truly RNNs)
+        Input: Single input
+        Output: Single output
+        Example: Image classification
+
+4. One-to-Many
+        Use Case: Generating a sequence from a single input
+        Input: Single input
+        Output: Sequence of outputs
+        Example: Image captioning
+
+5. Many-to-One
+        Use Case: Classifying a sequence
+        Input: Sequence of inputs
+        Output: Single output
+        Example: Sentiment analysis (positive/negative)
+
+|---------------------------------------------------------------------|
+| Type                   | Input    | Output   | Example              |
+| ---------------------- | -------- | -------- | -------------------- |
+| One-to-One             | 1        | 1        | Image classification |
+| One-to-Many            | 1        | Sequence | Image captioning     |
+| Many-to-One            | Sequence | 1        | Sentiment analysis   |
+| Many-to-Many (Equal)   | Sequence | Sequence | POS tagging          |
+| Many-to-Many (Unequal) | Sequence | Sequence | Machine translation  |
+|---------------------------------------------------------------------|
