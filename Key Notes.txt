@@ -153,3 +153,11 @@ Versions
 2017 -> YOLO V2 = > Better, Faster, Stronger
 2018 -> YOLO v3 => An Incremental Improvement
 2020 -> YOLO V4 => Optimal speed and Accuracy of Object Detction.
+
+
+                    RNN
+                    ---
+Recurrent Neural Networks (RNNs) are a class of deep learning algorithms specifically 
+designed to process sequential data, such as time series, text, audio, or video. Unlike
+traditional feedforward neural networks, RNNs have memory — they use their internal state 
+(hidden state) to process sequences of inputs.
