@@ -204,3 +204,15 @@ Types of RNN
 | Many-to-Many (Equal)   | Sequence | Sequence | POS tagging          |
 | Many-to-Many (Unequal) | Sequence | Sequence | Machine translation  |
 |---------------------------------------------------------------------|
+
+
+                    Vanishing Gradient
+                    ==================
+Vanishing gradient occurs when gradients become too small during backpropagation, 
+causing the model to stop learning from earlier layers or time steps, especially 
+in deep networks or RNNs.
+
+                    Exploding Gradient
+                    ==================
+Exploding gradient happens when gradients grow too large, making the model unstable 
+and causing weights to change drastically, often leading to training failure.
