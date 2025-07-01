@@ -212,6 +212,8 @@ Vanishing gradient occurs when gradients become too small during backpropagation
 causing the model to stop learning from earlier layers or time steps, especially 
 in deep networks or RNNs.
 
+Vanishing Gradient problem is more prominent in very deep neural networks.
+
                     Exploding Gradient
                     ==================
 Exploding gradient happens when gradients grow too large, making the model unstable 
