@@ -218,3 +218,15 @@ Vanishing Gradient problem is more prominent in very deep neural networks.
                     ==================
 Exploding gradient happens when gradients grow too large, making the model unstable 
 and causing weights to change drastically, often leading to training failure.
+
+
+                        BERT
+                        ====
+BERT (Bidirectional Encoder Representations from Transformers) is a revolutionary model.
+Architecture Overview
+---------------------
+
+1. Input: Sentence or pair of sentences (tokenized and embedded)
+2. Embedding Layer: Combines token, segment, and position embeddings
+3. Transformer Layers: Multiple stacked layers (e.g., BERT-Base has 12 layers)
+4. Output: Contextual word embeddings or sentence-level representation (e.g., [CLS] token)
